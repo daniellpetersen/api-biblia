@@ -5,9 +5,9 @@ using Flurl.Http;
 
 public class BuscarLivrosService
     {
-        public async Task<LivrosBiblia> Buscar(string biblia, string livro, string capitulo, string versiculo){
+        public async Task<LivrosBiblia> Buscar(string biblia, string livro, string capitulo){
 
-        string url = $"https://www.abibliadigital.com.br/api/verses/{biblia}/{livro}/{capitulo}/{versiculo}";
+        string url = $"https://www.abibliadigital.com.br/api/verses/{biblia}/{livro}/{capitulo}";
         return await url.GetJsonAsync<LivrosBiblia>();
 
 
