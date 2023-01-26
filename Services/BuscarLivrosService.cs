@@ -1,15 +1,15 @@
 ﻿
 using api_biblia.Models;
-namespace api_biblia.Services;
 using Flurl.Http;
+
+namespace api_biblia.Services;
 
 public class BuscarLivrosService
     {
-        public async Task<LivrosBiblia> Buscar(string biblia, string livro, string capitulo, string versiculo){
+        public async Task<List<Livros>> Buscar(){
 
-        string url = $"https://www.abibliadigital.com.br/api/verses/{biblia}/{livro}/{capitulo}/{versiculo}";
-        return await url.GetJsonAsync<LivrosBiblia>();
-
+        string url = $"https://www.abibliadigital.com.br/api/books";
+        return await url.GetJsonAsync<List<Livros>>();
 
     }
 

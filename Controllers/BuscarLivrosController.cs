@@ -16,10 +16,10 @@ public class BuscarLivrosController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> BuscarLivro(string biblia, string livro, string capitulo, string versiculo)
+    public async Task<IActionResult> BuscarLivro()
     {
 
-        var result = await _service.Buscar(biblia,livro,capitulo,versiculo);
+        var result = await _service.Buscar();
         
         return result == null ? NotFound() : Ok(result);
     }
