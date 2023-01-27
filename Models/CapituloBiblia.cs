@@ -19,46 +19,45 @@ namespace api_biblia.Models
     {
   
         [JsonProperty("abbrev")]
-        public Abbrev Abreviatura { get; set; }
+        public Abbrev? Abreviatura { get; set; }
 
         [JsonProperty("name")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [JsonProperty("author")]
-        public string Autor { get; set; }
+        public string? Autor { get; set; }
 
         [JsonProperty("group")]
-        public string Grupo { get; set; }
+        public string? Grupo { get; set; }
 
         [JsonProperty("version")]
-        public string Versao { get; set; }
+        public string? Versao { get; set; }
 
     }
 
     public class Chapter
     {
         [JsonProperty("number")]
-        public int Capitulo { get; set; }
+        public int? Capitulo { get; set; }
 
         [JsonProperty("verses")]
-        public int QuantidadeVersiculos { get; set; }
+        public int? QuantidadeVersiculos { get; set; }
     }
 
     public class Verse
     {
         [JsonProperty("number")]
-        public int Versiculo { get; set; }
+        public int? Versiculo { get; set; }
 
         [JsonProperty("text")]
-        public string Texto { get; set; }
+        public string? Texto { get; set; }
     }
 
     public class CapituloBiblia
     {
-
-        public Book Book { get; set; }
-        public Chapter Chapter { get; set; }
-        public IEnumerable<Verse> Verses { get; set; }
+        public Book? Book { get; set; }
+        public Chapter? Chapter { get; set; }
+        public IEnumerable<Verse>? Verses { get; set; }
 
     }
 }

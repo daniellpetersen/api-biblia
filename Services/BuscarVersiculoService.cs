@@ -1,5 +1,4 @@
-﻿
-using api_biblia.Models;
+﻿using api_biblia.Models;
 namespace api_biblia.Services;
 using Flurl.Http;
 

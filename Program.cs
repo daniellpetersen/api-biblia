@@ -11,6 +11,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<BuscarCapituloService>();
 builder.Services.AddScoped<BuscarLivroService>();
 builder.Services.AddScoped<BuscarLivrosService>();
+builder.Services.AddScoped<BuscarVersiculoAleatorioService>();
 builder.Services.AddScoped<BuscarVersiculoService>();
 builder.Services.AddScoped<BuscarVersoesService>();
 

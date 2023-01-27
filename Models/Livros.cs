@@ -5,22 +5,23 @@ namespace api_biblia.Models
 {
     public class Livros
     {
+
         [JsonProperty("abbrev")]
-        public Abbrev Abreviatura { get; set; }
+        public Abbrev? Abreviatura { get; set; }
 
         [JsonProperty("name")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
         
         [JsonProperty("author")]
-        public string Autor { get; set; }
+        public string? Autor { get; set; }
 
         [JsonProperty("chapters")]
         public int Capitulos { get; set; }
 
         [JsonProperty("group")]
-        public string Grupo { get; set; }
+        public string? Grupo { get; set; }
 
         [JsonProperty("testament")]
-        public string Testamento { get; set; }
+        public string? Testamento { get; set; }
     }
 }
