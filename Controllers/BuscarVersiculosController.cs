@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using api_biblia.Services;
-
-
+using api_biblia.Exceptions;
 
 namespace api_biblia.Controllers;
 
@@ -22,8 +21,15 @@ public class BuscarVersiculosController : ControllerBase
     {
 
         var result = await _service.Buscar(biblia,livro,capitulo, versiculo);
-        
-        return result == null ? NotFound() : Ok(result);
+
+        if (result is null)
+        {
+            throw new NotFoundException("Não foi possível encontrar o Versículo, verifique os campos digitados!");
+        }
+        else
+        {
+            return Ok(result);
+        }
     }
 
 

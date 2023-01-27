@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using api_biblia.Services;
+using api_biblia.Exceptions;
 
 namespace api_biblia.Controllers;
 
