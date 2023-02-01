@@ -1,5 +1,6 @@
 using api_biblia.Middlewares;
 using api_biblia.Services;
+using api_biblia.Services.Criar;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddScoped<BuscarLivrosService>();
 builder.Services.AddScoped<BuscarVersiculoAleatorioService>();
 builder.Services.AddScoped<BuscarVersiculoService>();
 builder.Services.AddScoped<BuscarVersoesService>();
+builder.Services.AddScoped<PesquisarPalavrasService>();
 
 var app = builder.Build();
 
