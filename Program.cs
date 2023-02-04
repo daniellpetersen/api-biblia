@@ -17,8 +17,16 @@ builder.Services.AddScoped<BuscarVersiculoAleatorioService>();
 builder.Services.AddScoped<BuscarVersiculoService>();
 builder.Services.AddScoped<BuscarVersoesService>();
 builder.Services.AddScoped<PesquisarPalavrasService>();
+builder.Services.AddScoped<CriarUsuarioService>();
+builder.Services.AddScoped<BuscarUsuarioService>();
+builder.Services.AddScoped<UpdateUserTokenService>();
+builder.Services.AddScoped<BuscarStatusUserService>();
+builder.Services.AddScoped<ExcluirUserService>();
+
+
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
