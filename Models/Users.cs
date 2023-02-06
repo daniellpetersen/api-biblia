@@ -55,4 +55,15 @@
 
     }
 
+    public class AlteraSenhaUser
+    {
+        public string? Msg { get; set; }
+    }
+
+    public class UsuarioDeletar
+    {
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+    }
+
 }

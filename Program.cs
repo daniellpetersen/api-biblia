@@ -21,7 +21,8 @@ builder.Services.AddScoped<CriarUsuarioService>();
 builder.Services.AddScoped<BuscarUsuarioService>();
 builder.Services.AddScoped<UpdateUserTokenService>();
 builder.Services.AddScoped<BuscarStatusUserService>();
-builder.Services.AddScoped<ExcluirUserService>();
+builder.Services.AddScoped<AlterarSenhaUserService>();
+builder.Services.AddScoped<DeleteUserService>();
 
 
 

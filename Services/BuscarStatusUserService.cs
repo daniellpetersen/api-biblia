@@ -8,7 +8,7 @@ namespace api_biblia.Services
     {
         public async Task<UserStats> Buscar()
         {
-            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlNhdCBGZWIgMDQgMjAyMyAwMzoyNDozOSBHTVQrMDAwMC42M2RkOWRhZjUyYjA1MDAwMjQ0YTgxYjMiLCJpYXQiOjE2NzU0ODEwNzl9.2rBBE1bhlx21PTDuXsQIgG0B98TeHq4HyeUfnzYUYRw";
+            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlN1biBGZWIgMDUgMjAyMyAxODoyMDoxNyBHTVQrMDAwMC5lbmcuZGFuaWVscGV0ZXJzZW5AZ21haWwuY29tIiwiaWF0IjoxNjc1NjIxMjE3fQ.q6VMeKY3xVhExYjtnKBbOVVWrKa_7j2JCVYqTngs6K8";
 
             var url = await $"https://www.abibliadigital.com.br/api/users/"
                .AppendPathSegments("stats")

@@ -87,4 +87,46 @@ namespace api_biblia.Controllers
             return result == null ? NotFound() : Ok(result);
         }
     }
+
+    [Route("[controller]")]
+    public class AlterarSenhaUserController : Controller
+    {
+        private readonly ILogger<AlterarSenhaUserController> _logger;
+        private readonly AlterarSenhaUserService _service;
+        public AlterarSenhaUserController(ILogger<AlterarSenhaUserController> logger, AlterarSenhaUserService service)
+        {
+            _logger = logger;
+            _service = service;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Buscar(string email)
+        {
+
+            var result = await _service.BuscarEmail(email);
+
+            return result == null ? NotFound() : Ok(result);
+        }
+    }
+
+    [Route("[controller]")]
+    public class DeletarUserController : Controller
+    {
+        private readonly ILogger<DeletarUserController> _logger;
+        private readonly DeleteUserService _service;
+        public DeletarUserController(ILogger<DeletarUserController> logger, DeleteUserService service)
+        {
+            _logger = logger;
+            _service = service;
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Buscar(string email, string password)
+        {
+
+            var result = await _service.Buscar(email, password);
+
+            return result == null ? NotFound() : Ok(result);
+        }
+    }
 }
