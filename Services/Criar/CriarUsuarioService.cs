@@ -10,7 +10,9 @@ namespace api_biblia.Services.Criar
         {
 
             var result = await "https://www.abibliadigital.com.br/api/users"
+                .WithHeader("Accept", "application/json")
                 .AppendPathSegments()
+                .AllowAnyHttpStatus()
                 .PostJsonAsync(new { name = nome, email, password = senha, notifications = notificacoes})
                 .ReceiveJson<Users>();
 

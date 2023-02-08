@@ -124,9 +124,9 @@ namespace api_biblia.Controllers
         public async Task<IActionResult> Buscar(string email, string password)
         {
 
-            var result = await _service.Buscar(email, password);
+            var result = await _service.Remover(email, password);
 
-            return result == null ? NotFound() : Ok(result);
+            return result.IsSuccessStatusCode == false ? NotFound(result) : Ok("Usuario removido com sucesso!");
         }
     }
 }
